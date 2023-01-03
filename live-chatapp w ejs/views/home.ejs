@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+    <style>
+        button {
+            width: 100px !important;
+        }
+</style>
+<%- include('./partials/header') %>
+<body>
+    <% if (action != "undefined" && action=="edit") { %>
+        <div class="alert alert-success">
+            The user '<%= userid %>' has been updated. 
+        </div>
+    <% } %>
+    <% if (action != "undefined" && action=="delete") { %>
+        <div class="alert alert-success">
+            The user '<%= userid %>' has been deleted. 
+        </div>
+    <% } %>
+</body>
+<%- include('./partials/footer') %>
+</html>
